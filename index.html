@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Habella";
+            src: url("./fonts/Habella.ttf") format("truetype");
+        }
+    </style>
+    <style>
+        .pulse-date {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .wedding-text {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Soft reveal animation */
+        .reveal {
+            animation: reveal 2s ease forwards;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatSlow {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-12px) scale(1.02);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .float-romantic {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        .frame-hover:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+        }
+
+        .handwriting {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .slide-animate {
+            animation: fadeSlide 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="w-[100vw] flex flex-col items-center justify-center bg-[#f4f5ef] overflow-x-hidden">
+
+
+    <div class="relative w-[100vw] md:h-[100vh] sm:h-[100vh] h-[90vh] flex items-center justify-center">
+
+        <div class="w-screen h-[100vh] bg-no-repeat bg-center bg-contain md:hidden sm:hidden"
+            style="background-image: url('./images/46b19360-7142-4c0f-a3e5-64eee8cbebe3.png'); background-size: cover;">
+        </div>
+        <div class="w-screen md:h-[100vh] sm:h-[100vh] h-[90vh] bg-no-repeat bg-center bg-contain md:inline-block sm:inline-block hidden"
+            style="background-image: url('./images/laptop\ view.png'); background-size: cover; background-position: bottom;">
+        </div>
+
+        <div
+            class="absolute top-[0%] left-[0%] w-[100vw] flex md:items-start sm:items-start items-center justify-center">
+
+            <div class="text-center pt-[30vh] w-[60%] md:pt-[15vh] sm:pt-[15vh]">
+
+                <h1 id="typingText"
+                    class="md:text-[4vw] sm:text-[4vw] text-[9vw] text-[#4a5d4a] tracking-wide leading-tight"></h1>
+
+                <p id="dateText" class="mt-[2vh] md:text-[2vw] sm:text-[2vw] text-[5vw] text-gray-600 opacity-0">
+                    8th February 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="weddingPage"
+        class="md:h-[130vh] sm:h-[130vh] h-[150vh] w-[100vw] bg-[#DEE2CF] overflow-x-hidden opacity-0 transition-opacity duration-[1000ms] ">
+        <div class="w-[100%] h-[100%] flex md:flex-row sm:flex-row flex-col">
+
+            <!-- LEFT : Calendar + Message -->
+            <div id="leftSide" class="md:w-[50%] sm:w-[50%] w-[100%] h-[100%] flex flex-col items-center justify-center gap-[5vh]
+         opacity-0 translate-x-[-5vw] transition-all duration-[1200ms]">
+
+
+                <!-- Calendar -->
+                <div class="md:w-[60%] w-[70%] bg-white rounded-[2%] shadow-lg p-[5%]">
+
+                    <h2 class="md:text-[2.2vw] text-[3vw] text-center mb-[3vh] text-[#6B7A5A]">
+                        February 2026
+                    </h2>
+
+                    <!-- Calendar Grid -->
+                    <div class="grid grid-cols-7 gap-[1vw] text-center text-[1.2vw]">
+
+                        <div class="font-semibold">S</div>
+                        <div class="font-semibold">M</div>
+                        <div class="font-semibold">T</div>
+                        <div class="font-semibold">W</div>
+                        <div class="font-semibold">T</div>
+                        <div class="font-semibold">F</div>
+                        <div class="font-semibold">S</div>
+
+                        <!-- Empty days -->
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                        <!-- Dates -->
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+
+                        <!-- Highlighted Wedding Date -->
+                        <div class="bg-[#6B7A5A] text-white rounded-full font-bold pulse-date">15</div>
+
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+
+                    </div>
+
+                    <p class="text-center mt-[3vh] md:text-[1.2vw] text-[2vw] text-[#6B7A5A]">
+                        💍 Wedding Day – 8th February 2026
+                    </p>
+                </div>
+
+                <!-- Wedding Message -->
+                <div class="w-[65%] text-center md:text-[1.3vw] sm:text-[1.3vw] text-[2.5vw] text-[#4A4A4A]">
+                    As Keshav and Rishika step into a new chapter of their lives,
+                    they are surrounded by love, warmth, and heartfelt wishes.
+                    May this beautiful journey be filled with laughter,
+                    togetherness, and everlasting happiness.
+                </div>
+
+            </div>
+
+            <!-- RIGHT : Photo Frame -->
+            <div id="rightSide" class="md:w-[50%] sm:w-[50%] w-[100%] h-[100%] flex items-center justify-center
+         opacity-0 scale-[0.9] transition-all duration-[1200ms]">
+
+                <!-- Frame -->
+                <div
+                    class="md:w-[60%] sm:w-[60%] w-[90%] md:h-[60%] h-[90%] sm:h-[60%] bg-white rounded-[3%] shadow-2xl p-[3%] flex items-center justify-center">
+
+                    <img src="./images/keshav-rishika1.jpeg" alt="Keshav & Rishika"
+                        class="w-[100%] h-[100%] object-cover rounded-[2%] cursor-pointer" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="frameSection" class="w-[100vw] h-[100vh] flex items-center justify-center bg-[#ECEFE5] overflow-hidden">
+
+        <!-- Frame Container -->
+        <div id="weddingFrame" class="relative 
+           w-[80vw] h-[80vw]        /* Mobile default */
+           sm:w-[70vw] sm:h-[70vw]
+           md:w-[55vw] md:h-[55vw]
+           lg:w-[45vw] lg:h-[45vw]
+           xl:w-[40vw] xl:h-[40vw]
+
+           max-w-[90vh] max-h-[90vh]   /* Keeps square on tall screens */
+
+           bg-no-repeat bg-contain bg-center
+           opacity-0 scale-[0.9]
+           transition-all duration-[1200ms] ease-out" style="background-image: url('./images/bg%20letter.png');">
+
+        </div>
+    </div>
+    <div class="bg-[#E6DDCC]">
+        <!-- MEMORY PAGE -->
+        <section id="memoryPage"
+            class="min-h-[100vh] w-[100vw] flex flex-col items-center justify-center px-[5vw] py-[8vh]">
+
+            <!-- Heading -->
+            <h1 class="handwriting text-[6vw] md:text-[4vw] text-[#2F2F2F] mb-[6vh] fade-up">
+                Memories of Beautiful Beginnings
+            </h1>
+
+            <!-- Memories Grid -->
+            <div class="grid grid-cols-2 gap-[3vw] md:w-[70%] sm:w-[70%] w-[80%] fade-up">
+
+                <img src="./images/keshav-rishika.jpeg"
+                    class="rounded-[1vw] shadow-lg hover:scale-[1.03] transition duration-700" />
+
+                <img src="./images/keshav-rishika2.jpeg"
+                    class="rounded-[1vw] shadow-lg hover:scale-[1.03] transition duration-700" />
+
+                <img src="./images/keshav-rishika3.jpeg"
+                    class="rounded-[1vw] shadow-lg hover:scale-[1.03] transition duration-700" />
+
+                <img src="./images/keshav-rishika1.jpeg"
+                    class="rounded-[1vw] shadow-lg hover:scale-[1.03] transition duration-700" />
+
+            </div>
+
+            <!-- Message -->
+            <div
+                class="w-[68%] text-center mt-[7vh] fade-up text-[#3F3F3F] text-[2.1vw] md:text-[1rem] leading-relaxed">
+
+                <p>
+                    Long before vows were written and promises spoken,
+                    Keshav and Rishika were quietly building a story of togetherness.
+                    From shared laughter to comforting silences, every moment
+                    shaped a bond rooted in trust, friendship, and love.
+                </p>
+
+                <p class="mt-[3vh]">
+                    These memories are not just moments frozen in time,
+                    but gentle reminders of a journey that grew stronger
+                    with every step taken hand in hand.
+                </p>
+
+                <p class="mt-[3vh] font-medium">
+                    As they step into marriage, they carry with them
+                    a heart full of memories and a future full of promises —
+                    beginning a forever written by love itself.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+    <!-- SLIDESHOW SECTION -->
+    <section id="slideshowSection"
+        class="w-[100vw] h-[110vh] bg-[#EEEDDF] flex items-center justify-center overflow-hidden relative">
+
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <!-- Slideshow Container -->
+        <div class="relative w-[85vw] h-[70vh] sm:w-[70vw] sm:h-[70vh] md:w-[50vw] md:h-[75vh] 
+           bg-white rounded-[2vw] shadow-2xl overflow-hidden z-10">
+
+            <img id="slideshowImage" src="./images/keshav-rishika5.jpeg"
+                class="w-[100%] h-[100%] object-cover transition-opacity duration-[1500ms] mb-[6vh] opacity-100" />
+        </div>
+        <!--caption -->
+        <div class="absolute md:bottom-[2vh] bottom-[5vh] text-center z-10 px-[6vw]">
+            <h2 class="handwriting text-[6vw] md:text-[3vw] text-black drop-shadow-lg">
+                Forever begins with memories
+            </h2>
+        </div>
+
+            <!-- Audio: start muted (allowed by browsers) and provide Unmute button as fallback -->
+            <audio id="romanticAudio" muted playsinline>
+                <source src="./audio/Tum Ho Toh Saiyaara.mp3" type="audio/mpeg" />
+                
+            </audio>
+
+            <button id="audioToggle" class="fixed bottom-12 right-6 bg-[#6B7A5A] text-white px-4 py-2 rounded-md z-50 hidden" aria-hidden="true">Unmute music</button>
+
+    </section>
+
+     <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#ECEFE5] w-screen text-gray-800 py-[5vh] text-center md:text-xl text-sm">
+         Made with ❤️ by Khushi
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
